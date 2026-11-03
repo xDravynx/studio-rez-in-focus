@@ -7,12 +7,14 @@ export default defineCliConfig({
   },
   typegen: {
     enabled: true,
-    path: '../static-exercise/{app,sanity}/**/*.{ts,tsx,js,jsx}',
+    path: '../client/{app,sanity}/**/*.{ts,tsx,js,jsx}',
     schema: 'schema.json',
-    generates: '../static-exercise/sanity.types.ts',
-    overloadClientMethods: true,
+    generates: '../client/sanity.types.ts',
+    overloadClientMethods: false,
   },
+  studioHost: 'rez-in-focus',
   deployment: {
+    appId: 'u3ev3jwh3hkffxrfa8fzswyt',
     /**
      * Enable auto-updates for studios.
      * Learn more at https://www.sanity.io/docs/studio/latest-version-of-sanity#k47faf43faf56
